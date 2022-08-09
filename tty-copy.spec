@@ -9,7 +9,7 @@ License:        MIT
 URL:            https://github.com/jirutka/tty-copy
 Source0:        https://github.com/jirutka/tty-copy/archive/v%{version}.tar.gz
 
-BuildRequires:  gcc make
+BuildRequires:  gcc make rubygem-asciidoctor
 
 %description
 tty-copy is a utility for copying content to the system clipboard from
