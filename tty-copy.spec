@@ -28,7 +28,7 @@ make
 
 %install
 # bin
-make PREFIX=%{buildroot}%{_prefix} install
+make PREFIX=%{_prefix} DESTDIR=%{buildroot} install
 
 %files
 %license LICENSE
