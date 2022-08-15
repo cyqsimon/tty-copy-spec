@@ -2,7 +2,7 @@
 
 Name:           tty-copy
 Version:        0.2.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Copy content to system clipboard via TTY and terminal using ANSI OSC52 sequence
 
 License:        MIT
@@ -21,6 +21,7 @@ terminal session, whether local, remote (e.g. SSH), or even nested therein.
 
 %build
 make
+strip build/%{name}
 
 %check
 # smoke test
@@ -37,5 +38,8 @@ make PREFIX=%{_prefix} DESTDIR=%{buildroot} install
 %{_mandir}/man1/%{name}.1*
 
 %changelog
+* Tue Aug 16 2022 cyqsimon - 0.2.2-2
+- Strip binary
+
 * Tue Aug 09 2022 cyqsimon - 0.2.2-1
 - Release 0.2.2
